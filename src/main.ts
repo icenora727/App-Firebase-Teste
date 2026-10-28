@@ -2,6 +2,7 @@ import { IonicVue } from '@ionic/vue';
 import { createApp } from 'vue';
 
 import App from './App.vue';
+import firebaseApp  from './firebase';
 import router from './router';
 
 /* Core CSS required for Ionic components to work properly */
@@ -39,3 +40,5 @@ const app = createApp(App).use(IonicVue).use(router);
 router.isReady().then(() => {
   app.mount('#app');
 });
+
+console.log('Firebase conectado', firebaseApp.options.projectId)
